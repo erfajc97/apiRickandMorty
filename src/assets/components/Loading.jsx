@@ -4,9 +4,9 @@ import banner from "../img/image 3.png";
 const Loading = () => {
     return (
  
-        <div className='Container__Loading' >
+       
 
-            <body className="loading">
+            <main className="loading">
 
                 <img src={banner} alt="" />
                 
@@ -14,10 +14,9 @@ const Loading = () => {
 
                  <h4>Welcome to Rick and Morty</h4>
 
-            </body>
+            </main>
 
 
-        </div>
 
     );
 };

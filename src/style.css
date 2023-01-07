@@ -201,6 +201,44 @@ body{
     color: #f5f5f5;
 }
 
+
+    footer{
+    width: 100%;  
+    position: relative;
+    margin-bottom: 2rem;
+    border-radius: 20px 20px 0 0;
+    }
+    .containerbuttonFooter{
+    width: 100%;
+    height: 55px;
+    padding-top: 0.2rem;
+     display: flex;
+    justify-content: space-around;
+    align-content: center;
+    position: fixed;
+    background-color: #076f7f;
+    border-radius: 20px 20px 0 0;
+    top:94%;
+    z-index: 110;
+    }
+
+    .pagination{
+    width: 11%;
+    height: 45px;
+    border-radius: 30px;
+    color: #0ac0d8;
+    background-color:  #062226;
+    box-shadow: 5px 5px 5px rgb(0,0,0);
+    
+    }
+
+   .nNb{
+    font-size: 13px;
+   }
+   .numbers{
+    font-size: 25px;
+   }
+
 @media screen and (min-width: 600px) {
 
     .banner{
@@ -249,6 +287,44 @@ body{
         grid-template-columns: 1fr 1fr 1fr 1fr;
 
     }
+      footer{
+   
+    margin-bottom: 7rem;
+    width: 80%;
+    margin: 0 auto;
+ 
+    }
+
+
+    .containerbuttonFooter{
+    height: 85px;
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 0.2rem;
+    top:91%;
+    border-radius: 35px 35px 0 0;
+     display: flex;
+    justify-content: center;
+    gap: 2.2rem;
+    background-color: #076f7f80;
+    
+   
+    }
+
+    .pagination{
+     width: 9%;
+    height: 80px; 
+    border: #babcb8 solid 0.15rem;   
+    }
+
+   .nNb{
+    font-size: 33px;
+    border-radius: 150px;
+    margin: 0 3.5rem;
+   }
+   .numbers{
+    font-size: 39px;
+   }
 
 
 }

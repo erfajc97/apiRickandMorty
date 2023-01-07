@@ -8,6 +8,7 @@ const Location = () => {
   const [generalInfo, setGeneralInfo] = useState({});
   const [searchId, setSearchId] = useState("");
   const [loading, setLoading] = useState(true);
+  const [pageId , setPageid] = useState(0)
 
   const url = `https://rickandmortyapi.com/api/location/`;
 
@@ -26,15 +27,32 @@ const Location = () => {
         
   }, []);
 
+  
+  
   //   console.log(generalInfo);
-
+  
   const searchType = () => {
     const url = `https://rickandmortyapi.com/api/location/${searchId}/`;
-
+    
     axios.get(url).then((res) => setGeneralInfo(res.data));
-
-    return generalInfo.residents;
+    
+    // return generalInfo.residents;
   };
+
+  // const valueButton = (e)=>{
+  //      setPageid(e.target.value) 
+
+  // }
+
+  // const pagebutton = () => {
+  //   const url = `https://rickandmortyapi.com/api/location/${pageId}/`;
+
+  //   axios.get(url).then((res) => setGeneralInfo(res.data));
+    
+  // };
+      
+   
+
 
   return (
     <div>
@@ -62,10 +80,9 @@ const Location = () => {
           <main>
             <div className="container__dimensioninfo">
               <h3 className="general_info">
-                
                 <b>Name: </b> <span>{generalInfo.name} </span>
               </h3>
-               <h3 className="general_info">
+              <h3 className="general_info">
                 <b> Planet:</b> <span>{generalInfo.type}</span>
               </h3>
               <h3 className="general_info">
@@ -82,6 +99,21 @@ const Location = () => {
               ))}
             </div>
           </main>
+
+          <footer>
+            <div className="containerbuttonFooter">
+              <button className="pagination nNb">Before</button>
+              <button className="pagination numbers">1</button>
+              {/* <button onClick={valueButton} value={2} className="pagination">
+              2
+            </button> */}
+              <button className="pagination numbers">2</button>
+              <button className="pagination numbers">3</button>
+              <button className="pagination numbers">4</button>
+              <button className="pagination numbers">5</button>
+              <button className="pagination nNb">Next </button>
+            </div>
+          </footer>
         </>
       )}
     </div>
