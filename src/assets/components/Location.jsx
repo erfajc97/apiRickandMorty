@@ -44,7 +44,7 @@ const Location = () => {
         <>
           <header>
             <img className="banner" src={banner} alt="" />
-           
+
             <div className="search">
               <input
                 className="inputSearch"
@@ -54,25 +54,26 @@ const Location = () => {
                 onChange={(e) => setSearchId(e.target.value)}
               />
 
-              <button onClick={searchType}>Search </button>
+              <button className="button__Search" onClick={searchType}>
+                Search
+              </button>
             </div>
           </header>
           <main>
             <div className="container__dimensioninfo">
-              <h3 className="general__Info">
-                {" "}
-                <b>Name: </b>
-                {generalInfo.name}{" "}
+              <h3 className="general_info">
+                
+                <b>Name: </b> <span>{generalInfo.name} </span>
               </h3>
-
-              <h3>
-                <b> Planet:</b> {generalInfo.type}
+               <h3 className="general_info">
+                <b> Planet:</b> <span>{generalInfo.type}</span>
               </h3>
-              <h3>
-                <b>Dimension:</b> {generalInfo.dimension}
+              <h3 className="general_info">
+                <b>Dimension:</b>
+                <span>{generalInfo.dimension}</span>
               </h3>
-              <h3>
-                <b>Poblation:</b> {generalInfo.residents?.length}
+              <h3 className="general_info">
+                <b>Poblation:</b> <span>{generalInfo.residents?.length}</span>
               </h3>
             </div>
             <div className="container__characters">

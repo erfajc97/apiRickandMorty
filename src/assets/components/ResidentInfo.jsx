@@ -26,13 +26,17 @@ const ResidentInfo = ({ characterUrl }) => {
 
 
   return (
-    <>
+    <div className="containerCharacter">
+
       <div className="infoWith_img">
+
         <div className="containerState">
           <div className="state" style={{ background: alive() }}></div>
           <span>{character.status}</span>
         </div>
+
         <img src={character.image} alt="" />
+
         <div className="info_character">
           <h2> {character.name} </h2>
           <span className="specie">Raza: </span>
@@ -42,8 +46,11 @@ const ResidentInfo = ({ characterUrl }) => {
           <span>Episodes where appear:</span>
           <p>{character.episode?.length}</p>
         </div>
+
+        
       </div>
-    </>
+    </div>
+    
   );
 };
 

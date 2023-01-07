@@ -1,15 +1,20 @@
 import React from 'react';
+import banner from "../img/image 3.png";
 
 const Loading = () => {
     return (
  
         <div className='Container__Loading' >
 
-            <div className="loading">
+            <body className="loading">
+
+                <img src={banner} alt="" />
                 
                  <h1>Loading...</h1>
 
-            </div>
+                 <h4>Welcome to Rick and Morty</h4>
+
+            </body>
 
 
         </div>
