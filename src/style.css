@@ -210,7 +210,7 @@ body{
     }
     .containerbuttonFooter{
     width: 100%;
-    height: 55px;
+    height: 63px;
     padding-top: 0.2rem;
      display: flex;
     justify-content: space-around;
@@ -218,8 +218,9 @@ body{
     position: fixed;
     background-color: #076f7f;
     border-radius: 20px 20px 0 0;
-    top:94%;
+    top:93%;
     z-index: 110;
+
     }
 
     .pagination{
@@ -306,12 +307,12 @@ body{
     width: 80%;
     margin: 0 auto;
     padding-top: 0.2rem;
-    top:91%;
+    top:90.5%;
     border-radius: 35px 35px 0 0;
      display: flex;
     justify-content: center;
     gap: 2.2rem;
-    background-color: #076f7f80;
+    background-color: #076f7f44;
     
    
     }
