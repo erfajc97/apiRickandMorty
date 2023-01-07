@@ -8,11 +8,11 @@
     
 }
 
-img{
+/* img{
   max-width: 100%;
   display: block;
   object-fit: cover;
-}
+} */
 
 .principal__container{
    background-color:#084851;
@@ -104,7 +104,7 @@ main{
     width: 90%;
     margin: 0 auto;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr ;
     gap: 1.5rem;
     grid-auto-rows: 1fr;
    
