@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import ResidentInfo from "./ResidentInfo";
 import banner from "../img/1.png";
+import imgRnM from "../img/Rick-and-Morty.png";
 import Loading from "./Loading";
 import Pagination from "./Pagination";
 
@@ -18,28 +19,20 @@ const Location = () => {
     const url = `https://rickandmortyapi.com/api/location/${randomId}/`;
 
     axios.get(url).then((res) => {
-
-        setGeneralInfo(res.data);
-        setTimeout(() => {
-          setLoading(false);
-        }, 1000);
-    })
-        
+      setGeneralInfo(res.data);
+      setTimeout(() => {
+        setLoading(false);
+      }, 1000);
+    });
   }, []);
 
-  
-  
   //   console.log(generalInfo);
-  
+
   const searchType = () => {
     const url = `https://rickandmortyapi.com/api/location/${searchId}/`;
-    
+
     axios.get(url).then((res) => setGeneralInfo(res.data));
-    
   };
-
-   
-
 
   return (
     <div>
@@ -49,12 +42,12 @@ const Location = () => {
         <>
           <header>
             <img className="banner" src={banner} alt="" />
-
+            <img className="imgrickb" src={imgRnM} alt="" />
             <div className="search">
               <input
                 className="inputSearch"
                 type="text"
-                placeholder="Escriba el Id"
+                placeholder="Write a number ( 1 - 126 )"
                 value={searchId}
                 onChange={(e) => setSearchId(e.target.value)}
               />
@@ -80,30 +73,9 @@ const Location = () => {
                 <b>Poblation:</b> <span>{generalInfo.residents?.length}</span>
               </h3>
             </div>
-            {/* <div className="container__characters"> */}
-              <Pagination residents={generalInfo.residents} />
-              {/* {generalInfo.residents?.map((resident) => (
-                <ResidentInfo characterUrl={resident} key={resident} />
-              ))} */}
-            {/* </div> */}
+
+            <Pagination residents={generalInfo.residents} />
           </main>
-
-          <>
-            
-
-
-              {/* <button className="pagination nNb">Back</button>
-              <button className="pagination numbers">1</button>
-              {/* <button onClick={valueButton} value={2} className="pagination">
-              2
-            </button> 
-              <button className="pagination numbers">2</button>
-              <button className="pagination numbers">3</button>
-              <button className="pagination numbers">4</button>
-              <button className="pagination numbers">5</button>
-              <button className="pagination nNb">Next </button> */}
-            
-          </>
         </>
       )}
     </div>

@@ -1,29 +1,27 @@
-import axios from 'axios';
-import React, { useEffect, useState } from 'react';
-import ResidentInfo from './ResidentInfo';
+import axios from "axios";
+import React, { useEffect, useState } from "react";
+import ResidentInfo from "./ResidentInfo";
 
 const Pagination = ({ residents }) => {
-    const [page, setPage] = useState(1);
-    const lastIndex = page * 20;
-    const firstIndex = lastIndex - 20;
-    const paginacion = residents?.slice(firstIndex, lastIndex);
-    const lastPage = Math.ceil(residents?.length / 20);
+  const [page, setPage] = useState(1);
+  const lastIndex = page * 20;
+  const firstIndex = lastIndex - 20;
+  const paginacion = residents?.slice(firstIndex, lastIndex);
+  const lastPage = Math.ceil(residents?.length / 20);
 
-      const numbers = []; 
-      for (let i = page - 1; i <= page + 1; i++) {
-        if (i > 0 && i <= lastPage) {
-          numbers.push(i);
-        }
-      }
-
-
+  const numbers = [];
+  for (let i = page - 1; i <= page + 1; i++) {
+    if (i > 0 && i <= lastPage) {
+      numbers.push(i);
+    }
+  }
 
   return (
-   <> 
+    <>
       <div className="container__characters">
         {paginacion?.map((url) => (
-            <ResidentInfo url={url} key={url} />
-            ))}
+          <ResidentInfo url={url} key={url} />
+        ))}
       </div>
 
       <footer>
@@ -37,7 +35,7 @@ const Pagination = ({ residents }) => {
             </button>
           </a>
           {numbers.map((number) => (
-              <a href="#">
+            <a href="#">
               <button
                 key={number}
                 className="pagination numbers"
@@ -56,8 +54,7 @@ const Pagination = ({ residents }) => {
           </a>
         </div>
       </footer>
-    
-     </>
+    </>
   );
 };
 

@@ -1,24 +1,21 @@
-import React from 'react';
-import banner from "../img/image 3.png";
+import React from "react";
+import banner from "../img/1.png";
+import imgRnM from "../img/Rick-and-Morty.png";
 
 const Loading = () => {
-    return (
- 
-       
+  return (
+    <main className="loading">
+      <img className="bannerLoading" src={banner} alt="" />
 
-            <main className="loading">
+      <h1>Loading...</h1>
 
-                <img src={banner} alt="" />
-                
-                 <h1>Loading...</h1>
+      <h4>Welcome to</h4>
+      <div className="containerimgRick">
 
-                 <h4>Welcome to Rick and Morty</h4>
-
-            </main>
-
-
-
-    );
+      <img className="imgrick" src={imgRnM} alt="" />
+      </div>
+    </main>
+  );
 };
 
 export default Loading;

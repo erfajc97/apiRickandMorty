@@ -10,29 +10,19 @@ const ResidentInfo = ({ url }) => {
 
   console.log(character);
 
-  
-   const alive = () => {
-    if (character.status==="Dead"){
-
-      return "red"
-
+  const alive = () => {
+    if (character.status === "Dead") {
+      return "red";
     } else if (character.status === "Alive") {
-      return "green"
-    }else{
-      return"grey"
+      return "green";
+    } else {
+      return "grey";
     }
-   }
-
-
+  };
 
   return (
-    
-
-   
     <div className="containerCharacter">
-
       <div className="infoWith_img">
-
         <div className="containerState">
           <div className="state" style={{ background: alive() }}></div>
           <span>{character.status}</span>
@@ -49,11 +39,8 @@ const ResidentInfo = ({ url }) => {
           <span>Episodes where appear:</span>
           <p>{character.episode?.length}</p>
         </div>
-
-
       </div>
     </div>
-
   );
 };
 
