@@ -10,7 +10,7 @@ const Pagination = ({ residents }) => {
     const lastPage = Math.ceil(residents?.length / 20);
 
       const numbers = []; 
-      for (let i = page - 3; i <= page + 3; i++) {
+      for (let i = page - 1; i <= page + 1; i++) {
         if (i > 0 && i <= lastPage) {
           numbers.push(i);
         }
