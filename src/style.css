@@ -4,8 +4,20 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Roboto', sans-serif;
+
     
+}
+
+.App{
+    font-family: "Nanum Pen Script";
+     -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+     font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+      monospace;
+       font-family: 'Roboto', sans-serif;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
 }
 
 /* img{
@@ -55,8 +67,10 @@ header img{
      background-color: #0ac0d8;
      border-radius: 20px;
      padding: 1rem;
-     color: #545151;
+     font-size: 17px;
+     color: #000000;
      box-shadow: 5px 5px 5px rgb(0,0,0);
+      background: linear-gradient(to bottom, #0e843f, #e7fb9a);
 }
 
 main{
@@ -64,6 +78,7 @@ main{
     flex-direction: column;
     gap: 3rem;
     padding-bottom: 3rem;
+     /* background: -webkit-linear-gradient(#e7fb9a, #0e843f); */
 }
 
 .container__dimensioninfo{
@@ -78,6 +93,7 @@ main{
     text-align: center;
     justify-content: space-evenly;
     border-radius: 10px;
+    
 }
 
 .general_info{
@@ -107,6 +123,7 @@ main{
     grid-template-columns: 1fr ;
     gap: 1.5rem;
     grid-auto-rows: 1fr;
+    
    
 
 }
@@ -117,6 +134,7 @@ main{
     background-color: #062226;
     border-radius: 20px;
      box-shadow: 5px 5px 5px rgb(0,0,0);
+      /* background: linear-gradient(to bottom, #0e843f, #e7fb9a); */
 }
 .infoWith_img{
  display: flex;
@@ -166,9 +184,9 @@ main{
 .containerState span{
    position: absolute;
     color: #FBFBFB;
-   top: 35%;
+   top: 25%;
   left: 40%;
-  font-size: 12px;
+  font-size: 25px;
 
 }
 body{
@@ -212,7 +230,7 @@ body{
     width: 100%;
     height: 63px;
     padding-top: 0.2rem;
-     display: flex;
+    display: flex;
     justify-content: space-around;
     align-content: center;
     position: fixed;
@@ -220,24 +238,27 @@ body{
     border-radius: 20px 20px 0 0;
     top:93%;
     z-index: 110;
+     /* background: linear-gradient(to bottom, #0e843f, #e7fb9a); */
 
     }
 
     .pagination{
-    width: 11%;
+    width: 100%;
     height: 45px;
     border-radius: 30px;
-    color: #0ac0d8;
+    color: #141818;
     background-color:  #062226;
     box-shadow: 5px 5px 5px rgb(0,0,0);
-    
+     background: linear-gradient(to bottom, #0e843f, #e7fb9a);
     }
 
    .nNb{
-    font-size: 13px;
+    font-size: 20px;
+    padding: 0.4rem 0.5rem 0.5rem 0.5rem;
    }
    .numbers{
-    font-size: 25px;
+    font-size: 30px;
+    padding: 0.2rem 0.5rem 0.5rem 0.5rem;
    }
 
 @media screen and (min-width: 600px) {
@@ -282,7 +303,7 @@ body{
     font-size: 20px;
     }
 
-        .container__characters{
+    .container__characters{
         
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -310,15 +331,15 @@ body{
     top:90.5%;
     border-radius: 35px 35px 0 0;
      display: flex;
-    justify-content: center;
+    justify-content: space-around;
     gap: 2.2rem;
     background-color: #076f7f44;
-    
+   
    
     }
 
     .pagination{
-     width: 9%;
+     width: 100%;
     height: 80px; 
     border: #babcb8 solid 0.15rem;   
     }
@@ -326,10 +347,12 @@ body{
    .nNb{
     font-size: 33px;
     border-radius: 150px;
-    margin: 0 3.5rem;
+    margin: 0;
+    padding: 0.2rem 2rem 0.5rem 2rem;
    }
    .numbers{
     font-size: 39px;
+     padding: 0.2rem 2rem 0.5rem 2rem;
    }
 
 

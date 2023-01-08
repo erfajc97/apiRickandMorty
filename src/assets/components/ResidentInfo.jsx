@@ -1,11 +1,11 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 
-const ResidentInfo = ({ characterUrl }) => {
+const ResidentInfo = ({ url }) => {
   const [character, setCharacter] = useState({});
 
   useEffect(() => {
-    axios.get(characterUrl).then((res) => setCharacter(res.data));
+    axios.get(url).then((res) => setCharacter(res.data));
   }, []);
 
   console.log(character);
@@ -26,6 +26,9 @@ const ResidentInfo = ({ characterUrl }) => {
 
 
   return (
+    
+
+   
     <div className="containerCharacter">
 
       <div className="infoWith_img">
@@ -47,10 +50,10 @@ const ResidentInfo = ({ characterUrl }) => {
           <p>{character.episode?.length}</p>
         </div>
 
-        
+
       </div>
     </div>
-    
+
   );
 };
 

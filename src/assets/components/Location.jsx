@@ -1,14 +1,14 @@
 import axios from "axios";
 import React, { useEffect, useState } from "react";
 import ResidentInfo from "./ResidentInfo";
-import banner from "../img/image 3.png";
+import banner from "../img/1.png";
 import Loading from "./Loading";
+import Pagination from "./Pagination";
 
 const Location = () => {
   const [generalInfo, setGeneralInfo] = useState({});
   const [searchId, setSearchId] = useState("");
   const [loading, setLoading] = useState(true);
-  const [pageId , setPageid] = useState(0)
 
   const url = `https://rickandmortyapi.com/api/location/`;
 
@@ -36,21 +36,8 @@ const Location = () => {
     
     axios.get(url).then((res) => setGeneralInfo(res.data));
     
-    // return generalInfo.residents;
   };
 
-  // const valueButton = (e)=>{
-  //      setPageid(e.target.value) 
-
-  // }
-
-  // const pagebutton = () => {
-  //   const url = `https://rickandmortyapi.com/api/location/${pageId}/`;
-
-  //   axios.get(url).then((res) => setGeneralInfo(res.data));
-    
-  // };
-      
    
 
 
@@ -93,27 +80,30 @@ const Location = () => {
                 <b>Poblation:</b> <span>{generalInfo.residents?.length}</span>
               </h3>
             </div>
-            <div className="container__characters">
-              {generalInfo.residents?.map((resident) => (
+            {/* <div className="container__characters"> */}
+              <Pagination residents={generalInfo.residents} />
+              {/* {generalInfo.residents?.map((resident) => (
                 <ResidentInfo characterUrl={resident} key={resident} />
-              ))}
-            </div>
+              ))} */}
+            {/* </div> */}
           </main>
 
-          <footer>
-            <div className="containerbuttonFooter">
-              <button className="pagination nNb">Before</button>
+          <>
+            
+
+
+              {/* <button className="pagination nNb">Back</button>
               <button className="pagination numbers">1</button>
               {/* <button onClick={valueButton} value={2} className="pagination">
               2
-            </button> */}
+            </button> 
               <button className="pagination numbers">2</button>
               <button className="pagination numbers">3</button>
               <button className="pagination numbers">4</button>
               <button className="pagination numbers">5</button>
-              <button className="pagination nNb">Next </button>
-            </div>
-          </footer>
+              <button className="pagination nNb">Next </button> */}
+            
+          </>
         </>
       )}
     </div>
