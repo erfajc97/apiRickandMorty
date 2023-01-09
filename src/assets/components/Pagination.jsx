@@ -8,10 +8,11 @@ const Pagination = ({ residents }) => {
   const firstIndex = lastIndex - 20;
   const paginacion = residents?.slice(firstIndex, lastIndex);
   const lastPage = Math.ceil(residents?.length / 20);
+//  console.log(lastPage);
 
   const numbers = [];
-  for (let i = page - 1; i <= page + 1; i++) {
-    if (i > 0 && i <= lastPage) {
+  for (let i = page - 3; i <= page + 2; i++) {
+    if (i >= page && i <= lastPage) {
       numbers.push(i);
     }
   }
@@ -34,15 +35,26 @@ const Pagination = ({ residents }) => {
               Back
             </button>
           </a>
+
+
+
           {numbers.map((number) => (
-            <a href="#">
+            <a href="#"
+              key={number}
+            >
+
               <button
-                key={number}
                 className="pagination numbers"
                 onClick={() => setPage(number)}>
                 {number}
               </button>
+
+
             </a>
+
+
+
+
           ))}
           <a href="#">
             <button
