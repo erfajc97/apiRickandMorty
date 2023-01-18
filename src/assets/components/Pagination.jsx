@@ -11,6 +11,8 @@ const Pagination = ({ residents }) => {
 //  console.log(lastPage);
 
   const numbers = [];
+
+
   for (let i = page - 3; i <= page + 2; i++) {
     if (i >= page && i <= lastPage) {
       numbers.push(i);

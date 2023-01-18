@@ -10,6 +10,8 @@ const Location = () => {
   const [generalInfo, setGeneralInfo] = useState({});
   const [searchId, setSearchId] = useState("");
   const [loading, setLoading] = useState(true);
+  const [localsuggest, setLocalsuggest] = useState([]);
+  const [backg, setBackg] = useState(true)
 
   const url = `https://rickandmortyapi.com/api/location/`;
 
@@ -26,12 +28,30 @@ const Location = () => {
     });
   }, []);
 
+  useEffect(() => {
+    if (searchId) {
+      axios
+        .get(`https://rickandmortyapi.com/api/location?name=${searchId}`)
+        .then((res) => setLocalsuggest(res.data.results));
+    } else {
+      setLocalsuggest([]);
+      setBackg(true);
+    }
+  }, [searchId]);
+
+  console.log(localsuggest);
+
   //   console.log(generalInfo);
 
   const searchType = () => {
     const url = `https://rickandmortyapi.com/api/location/${searchId}/`;
 
     axios.get(url).then((res) => setGeneralInfo(res.data));
+  };
+
+  const selectSuggest = (suggest) => {
+    setGeneralInfo(suggest);
+    setSearchId("");
   };
 
   return (
@@ -55,6 +75,20 @@ const Location = () => {
               <button className="button__Search" onClick={searchType}>
                 Search
               </button>
+            </div>
+            <div className="container_suggest">
+              <ul
+                style={{ display: backg? "block" :"none" }}
+                className="container_suggestion_list">
+                {localsuggest.map((suggest, index) => (
+                  <li
+                    className="suggestion_list"
+                    key={index}
+                    onClick={() => selectSuggest(suggest)}>
+                    {suggest.name}
+                  </li>
+                ))}
+              </ul>
             </div>
           </header>
           <main>

@@ -81,6 +81,7 @@ header img {
 }
 
 main {
+  margin-top: 1.2rem;
   display: flex;
   flex-direction: column;
   gap: 3rem;
@@ -257,7 +258,51 @@ footer {
     margin:0;
 }
 
+
+.container_suggest{
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+   position: relative;
+}
+
+.container_suggestion_list{
+  width: 80%;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;  
+  padding: 1rem;
+  border-radius: 20px;
+  color: #dfe2dc;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  margin-bottom: 1rem;
+ position: absolute;
+ z-index: 200;
+ top: -1.4rem;
+ background-color: #7e7e7e;
+  
+}
+
+.suggestion_list{
+  width: 80%;
+  margin: 0 auto;
+  list-style-type: none;
+  
+  
+}
+
 @media screen and (min-width: 600px) {
+.container_suggestion_list{
+  width: 50%;
+ top: -1.3rem;
+  
+}
+
+
   .banner {
     height: 400px;
   }
